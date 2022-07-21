@@ -12,11 +12,12 @@
       <a-assets>
         <a-asset-item id="deerModel" src="scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+	<audio id="koenig" src="Audio_Koenig_Ludwig_Mal_den_Code.mp3" preload="auto"></audio>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
-
-      <a-entity mindar-image-target="targetIndex: 0" sound="src: url(Audio_Koenig_Ludwig_Mal_den_Code.mp3); on: click">
+      <a-entity cursor position="0 0 -5"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 0" sound="src: #koenig; on: click">
         <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
